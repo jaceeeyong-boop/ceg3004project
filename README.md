@@ -42,7 +42,8 @@ The model must perform well under all three conditions.
 ### 5.1 Audio Preprocessing
 Several preprocessing methods were tested to improve audio quality and consistency:
 - Silence trimming (removes leading and trailing silence)
-- Peak/RMS normalization (normalizes amplitude)
+- Peak normalization (normalizes amplitude)
+- RMS normalization (normalizes audio based on signal energy)
 - Fixed-length padding/truncation (ensures all clips are 5 seconds)
 - Pre-emphasis filtering (boosts high-frequency components)
 
@@ -55,15 +56,26 @@ Evaluation metric: Macro-F1 score
 Only the preprocessing pipeline was changed in each experiment.
 
 Preprocessing Methods Tested
-Experiment	Preprocessing Description
-P0	Baseline (no preprocessing)
-P1	Trim silence + Peak normalization + Fixed length (5 seconds)
-P2	Trim silence + RMS normalization + Fixed length (5 seconds)
-P3	P1 + Pre-emphasis filter
+| Experiment | Preprocessing | Macro-F1 |
+|------------|--------------|----------|
+| P0 | Baseline | 0.4768 |
+| P1 | Trim + Peak Norm + Fixed Length | **0.5268** |
+| P2 | Trim + RMS Norm + Fixed Length | 0.5241 |
+| P3 | P1 + Pre-emphasis | 0.5190 |
 
 
 The final preprocessing pipeline used:
+Audio → Trim Silence → Peak Normalize → Fixed Length (5s) → Feature Extraction
 
+## Discussion
+
+From the results, it can be observed that applying preprocessing significantly improved the Macro-F1 score compared to the baseline without preprocessing. The baseline model achieved a Macro-F1 score of 0.4768, while all preprocessing methods achieved higher scores.
+
+Among the tested methods, P1 (Trim + Peak Normalization + Fixed Length) achieved the highest Macro-F1 score of 0.5268, indicating that removing silence, normalizing amplitude, and standardizing clip length improves feature consistency and classification performance.
+
+Although RMS normalization (P2) also performed well, its performance was slightly lower than peak normalization. The addition of pre-emphasis (P3) did not further improve performance, suggesting that boosting high-frequency components was not necessary for this dataset.
+
+Therefore, P1 was selected as the final preprocessing pipeline for subsequent feature extraction experiments.
 
 ### 5.2 Feature Extraction (DSP Features)
 The following DSP features were extracted from each audio clip:
