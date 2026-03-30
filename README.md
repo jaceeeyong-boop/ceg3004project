@@ -9,9 +9,9 @@ This project is based on the provided baseline code, and improvements were made 
 - Audio preprocessing
 - DSP feature extraction
 - Model selection
-- Experimental evaluation
 
----
+Aim
+The aim of this project is to design a robust audio classification pipeline for Environmental Sound Classification that performs well under clean, noisy, and band-limited conditions. The system should be able to classify environmental audio clips into 50 sound classes using meaningful DSP feature extraction and machine learning techniques.
 
 ## 2. Dataset Description
 The dataset is derived from the ESC-50 dataset and contains:
