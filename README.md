@@ -49,13 +49,13 @@ Several preprocessing methods were tested to improve audio quality and consisten
 
 To ensure a fair comparison, the following were kept constant during this stage:
 
-- **Feature set:** MFCC + Delta + Delta-Delta
-- **Model:** Support Vector Classifier (SVC)
-- **Evaluation metric:** Macro-F1 score
+- Feature set: MFCC + Delta + Delta-Delta
+- Model: Support Vector Classifier (SVC)
+- Evaluation metric: Macro-F1 score
 
 Only the preprocessing pipeline was changed in each experiment.
 
-### 5.2 Preprocessing Methods Tested
+### Preprocessing Methods Tested
 | Experiment | Preprocessing | Macro-F1 |
 |------------|--------------|----------|
 | P0 | Baseline | 0.4768 |
@@ -67,8 +67,7 @@ Only the preprocessing pipeline was changed in each experiment.
 The final preprocessing pipeline used:
 Audio → Trim Silence → Peak Normalize → Fixed Length (5s) → Feature Extraction
 
-## 5.3 Discussion
-
+## Discussion
 From the results, it can be observed that applying preprocessing significantly improved the Macro-F1 score compared to the baseline without preprocessing. The baseline model achieved a Macro-F1 score of 0.4768, while all preprocessing methods achieved higher scores.
 
 Among the tested methods, P1 (Trim + Peak Normalization + Fixed Length) achieved the highest Macro-F1 score of 0.5268, indicating that removing silence, normalizing amplitude, and standardizing clip length improves feature consistency and classification performance.
