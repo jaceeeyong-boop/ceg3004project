@@ -208,7 +208,7 @@ The code will generate:
 Submission CSV file
 Trained model file (.joblib)
 
-10. Reproducibility
+## 10. Reproducibility
 
 To reproduce results:
 
@@ -218,52 +218,12 @@ Run all notebook cells in order
 Use the final selected preprocessing and feature extraction pipeline
 Train the SVC model and generate predictions
 
-11. Team Contribution
+## 11. Team Contribution
 Team Member	Contribution
 Member 1	Audio preprocessing, DSP feature extraction
 Member 2	Model training, experiments, GitHub documentation
 Both	Evaluation, testing, final submission
 
-12. Conclusion
-
+## 12. Conclusion
 This project demonstrates that combining meaningful DSP feature extraction with a non-linear classifier such as SVC can achieve strong performance in environmental sound classification. Experimental comparisons show that preprocessing, feature engineering, and model selection all significantly affect classification performance. The final system is robust, reproducible, and performs well under clean, noisy, and band-limited conditions.
 
-
-# What else you should upload to GitHub
-Make sure your repo contains:
-
-| File | Purpose |
-|------|---------|
-| README.md | Project explanation |
-| requirements.txt | Libraries |
-| Notebook / Python script | Your code |
-| model.joblib | Final trained model |
-| submission.csv | Final predictions |
-| results tables | Experiment results |
-| figures | Graphs |
-| docs/method_notes.md | DSP explanation |
-
-
-# requirements.txt (put this file in GitHub)
-```txt
-numpy
-pandas
-librosa
-scikit-learn
-joblib
-matplotlib
-tqdm
-soundfile
-```
-
-Final Tip
-
-Markers usually look for:
-
-Clear README
-Experiments table
-Explanation of DSP features
-Why you chose SVC
-Reproducibility steps
-
-If your README has all these sections, your GitHub marks should be quite safe.
