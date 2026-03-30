@@ -42,9 +42,25 @@ The model must perform well under all three conditions.
 ### 5.1 Audio Preprocessing
 Several preprocessing methods were tested to improve audio quality and consistency:
 - Silence trimming (removes leading and trailing silence)
-- Peak normalization (normalizes amplitude)
+- Peak/RMS normalization (normalizes amplitude)
 - Fixed-length padding/truncation (ensures all clips are 5 seconds)
 - Pre-emphasis filtering (boosts high-frequency components)
+
+To ensure a fair comparison, the following were kept constant during this stage:
+
+Feature set: MFCC + Delta + Delta-Delta
+Model: Support Vector Classifier (SVC)
+Evaluation metric: Macro-F1 score
+
+Only the preprocessing pipeline was changed in each experiment.
+
+Preprocessing Methods Tested
+Experiment	Preprocessing Description
+P0	Baseline (no preprocessing)
+P1	Trim silence + Peak normalization + Fixed length (5 seconds)
+P2	Trim silence + RMS normalization + Fixed length (5 seconds)
+P3	P1 + Pre-emphasis filter
+
 
 The final preprocessing pipeline used:
 
