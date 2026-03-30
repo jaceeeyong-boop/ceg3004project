@@ -88,14 +88,11 @@ The following DSP features were extracted from each audio clip:
 | Spectral Centroid | Brightness of sound |
 | Spectral Bandwidth | Spread of frequency content |
 | Spectral Rolloff | Frequency below which most energy is contained |
-| Zero Crossing Rate | Measures noisiness of signal |
 | Spectral Flux | Measures rate of change in spectrum |
 
 Additional techniques:
 - CMVN (Cepstral Mean and Variance Normalization)
 - Robust pooling (mean, standard deviation, median, percentiles)
-
----
 
 ### 5.3 Models Evaluated
 The following machine learning models were tested:
