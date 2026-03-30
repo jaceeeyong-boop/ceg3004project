@@ -10,10 +10,19 @@ This project is based on the provided baseline code, and improvements were made 
 - DSP feature extraction
 - Model selection
 
-Aim
+## 2. Aim
 The aim of this project is to design a robust audio classification pipeline for Environmental Sound Classification that performs well under clean, noisy, and band-limited conditions. The system should be able to classify environmental audio clips into 50 sound classes using meaningful DSP feature extraction and machine learning techniques.
 
-## 2. Dataset Description
+## 3. Objectives
+The objectives of this project are:
+1. To preprocess environmental audio clips to improve signal quality and consistency.
+2. To extract meaningful DSP features such as MFCC, log-mel spectrogram, and spectral features.
+3. To apply machine learning classifiers to classify audio clips into 50 environmental sound classes.
+4. To improve robustness of the model under noisy and band-limited conditions.
+5. To evaluate different preprocessing methods, feature extraction techniques, and models using Macro-F1 score.
+6. To develop a reproducible and well-documented system using GitHub.
+
+## 4. Dataset Description
 The dataset is derived from the ESC-50 dataset and contains:
 - 2,000 audio clips
 - 50 environmental sound classes
@@ -28,11 +37,9 @@ The evaluation dataset contains three versions of each clip:
 
 The model must perform well under all three conditions.
 
----
+## 5. Methodology
 
-## 3. Methodology
-
-### 3.1 Audio Preprocessing
+### 5.1 Audio Preprocessing
 Several preprocessing methods were tested to improve audio quality and consistency:
 - Silence trimming (removes leading and trailing silence)
 - Peak normalization (normalizes amplitude)
@@ -42,9 +49,7 @@ Several preprocessing methods were tested to improve audio quality and consisten
 The final preprocessing pipeline used:
 
 
----
-
-### 3.2 Feature Extraction (DSP Features)
+### 5.2 Feature Extraction (DSP Features)
 The following DSP features were extracted from each audio clip:
 
 | Feature | Description |
@@ -65,7 +70,7 @@ Additional techniques:
 
 ---
 
-### 3.3 Models Evaluated
+### 5.3 Models Evaluated
 The following machine learning models were tested:
 
 | Model | Type |
@@ -76,11 +81,10 @@ The following machine learning models were tested:
 
 SVC with RBF kernel achieved the best Macro-F1 score and was selected as the final model.
 
----
 
-## 4. Experiments
+## 6. Experiments
 
-### 4.1 Preprocessing Experiments
+### 6.1 Preprocessing Experiments
 | Experiment | Preprocessing | Macro-F1 |
 |-----------|--------------|----------|
 | P0 | No preprocessing | XX |
@@ -91,9 +95,8 @@ SVC with RBF kernel achieved the best Macro-F1 score and was selected as the fin
 
 Best preprocessing: **P?**
 
----
 
-### 4.2 Feature Extraction Experiments
+### 6.2 Feature Extraction Experiments
 | Experiment | Feature Set | Macro-F1 |
 |-----------|------------|----------|
 | F0 | MFCC + Delta + Delta-Delta | XX |
@@ -104,9 +107,8 @@ Best preprocessing: **P?**
 
 Best feature set: **F?**
 
----
 
-### 4.3 Model Comparison
+### 6.3 Model Comparison
 | Model | Macro-F1 |
 |------|----------|
 | Logistic Regression | XX |
@@ -115,9 +117,8 @@ Best feature set: **F?**
 
 Final model selected: **SVC (RBF Kernel)**
 
----
 
-## 5. Final Pipeline
+## 7. Final Pipeline
 The final audio classification pipeline:
 
 
@@ -126,9 +127,8 @@ Final pipeline details:
 - Features: MFCC + Delta + Delta-Delta + Log-Mel + Spectral Features + CMVN + Robust Pooling
 - Model: Support Vector Classifier (RBF Kernel)
 
----
 
-## 6. Repository Structure
+## 8. Repository Structure
 
 .
 ├── README.md
@@ -150,7 +150,7 @@ Final pipeline details:
 
 ---
 
-## 7. How to Run the Project
+## 9. How to Run the Project
 
 ### Step 1 – Install dependencies
 ```bash
@@ -184,7 +184,7 @@ The code will generate:
 Submission CSV file
 Trained model file (.joblib)
 
-8. Reproducibility
+10. Reproducibility
 
 To reproduce results:
 
@@ -194,18 +194,16 @@ Run all notebook cells in order
 Use the final selected preprocessing and feature extraction pipeline
 Train the SVC model and generate predictions
 
-9. Team Contribution
+11. Team Contribution
 Team Member	Contribution
 Member 1	Audio preprocessing, DSP feature extraction
 Member 2	Model training, experiments, GitHub documentation
 Both	Evaluation, testing, final submission
 
-10. Conclusion
+12. Conclusion
 
 This project demonstrates that combining meaningful DSP feature extraction with a non-linear classifier such as SVC can achieve strong performance in environmental sound classification. Experimental comparisons show that preprocessing, feature engineering, and model selection all significantly affect classification performance. The final system is robust, reproducible, and performs well under clean, noisy, and band-limited conditions.
 
-
----
 
 # What else you should upload to GitHub
 Make sure your repo contains:
@@ -221,7 +219,6 @@ Make sure your repo contains:
 | figures | Graphs |
 | docs/method_notes.md | DSP explanation |
 
----
 
 # requirements.txt (put this file in GitHub)
 ```txt
