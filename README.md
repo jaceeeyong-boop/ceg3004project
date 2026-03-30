@@ -1,5 +1,7 @@
 # CEG3004 Project – Environmental Sound Classification
 
+Group:Pr_15
+
 ## 1. Project Overview
 This project implements an Environmental Sound Classification system using Digital Signal Processing (DSP) feature extraction and machine learning classification. The objective is to classify audio clips into 50 sound classes and ensure the model performs well under clean, noisy, and band-limited conditions.
 
