@@ -153,11 +153,14 @@ Final pipeline details:
 ### Step 1 – Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 Step 2 – Open the notebook
 
 Run the provided notebook:
+```bash
 ceg3004_project_colab.ipynb
+```
 
 Step 3 – Set TEAM_ID
 
@@ -228,6 +231,7 @@ joblib
 matplotlib
 tqdm
 soundfile
+```
 
 Final Tip
 
