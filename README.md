@@ -157,7 +157,7 @@ The following machine learning models were tested:
 ### Stage 3 Results – Model Comparison
 | Exp | Model | Macro-F1 |
 |-----|------|----------|
-| M1 | Support Vector Classifier (SVC) | **Best** |
+| M1 | Support Vector Classifier (SVC) | **0.6054** |
 | M2 | Logistic Regression | 0.4730 |
 | M3 | Random Forest | 0.5356 |
 
