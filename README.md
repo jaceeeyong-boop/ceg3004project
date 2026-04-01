@@ -16,10 +16,10 @@ The aim is to design a robust audio classification pipeline for Environmental So
 
 ## 3. Objectives
 The objectives of this project are:
-• Train on labeled environmental sound data
-• Extract meaningful DSP features
-• Use a machine learning classifier to classify into the 50 sound classes
-• Demonstrates robustness to noise and bandwidth distortions
+- Train on labeled environmental sound data
+- Extract meaningful DSP features
+- Use a machine learning classifier to classify into the 50 sound classes
+- Demonstrates robustness to noise and bandwidth distortions
 
 
 ## 4. Dataset Description
