@@ -190,8 +190,6 @@ The final audio classification pipeline:
 ├── README.md
 ├── ceg3004_project_colab.py
 ├── experiment_results.xlsx
-├── TEAM_15_predictions.csv
-├── TEAM_15_validation.csv
 
 ## 8. How to Run the Project
 
